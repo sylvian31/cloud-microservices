@@ -1,45 +1,31 @@
-package com.cloud.microservices.currencyexchangeservice;
+package com.cloud.microservices.currencyconversionservice;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class CurrencyConversionBean {
 
-@Entity
-public class ExchangeValue {
-
-	@Id
-	@GeneratedValue
 	private Long id;
-	
-	@Column(name="currency_from")
 	private String from;
-	
-	@Column(name="currency_to")
 	private String to;
-	
-	
+	private BigDecimal quantity;
 	private BigDecimal convertionMultiple;
-	
+	private BigDecimal totalAmount;
 	private int port;
 
-	public ExchangeValue() {
+	public CurrencyConversionBean() {
 		super();
 	}
 
-	public ExchangeValue(int port) {
-		super();
-		this.port = port;
-	}
-
-	public ExchangeValue(Long id, String from, String to, BigDecimal convertionMultiple) {
+	public CurrencyConversionBean(Long id, String from, String to, BigDecimal quantity, BigDecimal convertionMultiple,
+			BigDecimal totalAmount, int port) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
+		this.quantity = quantity;
 		this.convertionMultiple = convertionMultiple;
+		this.totalAmount = totalAmount;
+		this.port = port;
 	}
 
 	public Long getId() {
@@ -66,12 +52,28 @@ public class ExchangeValue {
 		this.to = to;
 	}
 
+	public BigDecimal getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(BigDecimal quantity) {
+		this.quantity = quantity;
+	}
+
 	public BigDecimal getConvertionMultiple() {
 		return convertionMultiple;
 	}
 
 	public void setConvertionMultiple(BigDecimal convertionMultiple) {
 		this.convertionMultiple = convertionMultiple;
+	}
+
+	public BigDecimal getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(BigDecimal totalAmount) {
+		this.totalAmount = totalAmount;
 	}
 
 	public int getPort() {
