@@ -48,7 +48,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.netflix.ribbon/ribbon -->
+		<dependency>
+			<groupId>com.netflix.ribbon</groupId>
+			<artifactId>ribbon</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
