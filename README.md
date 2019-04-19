@@ -32,3 +32,22 @@ http://localhost:8765/currency-exchange-service/currency-exchange/from/USD/to/EU
 http://localhost:8765/currency-conversion-service/currency-conversion-feign/from/CAD/to/EUR/quantity/2
 
 http://localhost:9411/zipkin/
+
+
+
+#Points principaux
+Connect Spring Cloud Config Server to Local Git Repository
+Connect Service to Spring Cloud Config Server
+Using Feign REST Client for Service Invocation
+load balancing with Ribbon
+Eureka Naming Server
+Zuul API Gateway
+Zuul Logging Filter
+Spring Cloud Sleuth
+Rabbit MQ
+Distributed Tracing with Zipkin
+Spring Cloud Bus
+Fault Tolerance with Hystrix
+
+
+
